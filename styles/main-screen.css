@@ -1,14 +1,125 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.div-cabecalho {
+    text-align: center;
+    color: #403F4B;
+}
+
+.btn-toggle {
+    border-radius: 10px;
+    background-color: #403F4B;
+    text-align: left;
+    color: white;
+    cursor: pointer; 
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #403F4B;
+}
+
+p {
+    color: #403F4B;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.button-plus {
+    display: inline-block;
+    background: #403F4B;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.header {
+    background: radial-gradient(#fff, #95daf1);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 3px;
+    background-color:#403F4B;
+    color: white;
+}
+
+.main-footer a{
+    text-align: center;
+    padding: 3px;
+    background-color:#403F4B;
+    color: white;
+}
+
+.main-footer p{
+    text-align: center;
+    padding: 3px;
+    background-color:#403F4B;
+    color: white;
+}
+
 body {
-    --text-color: #222;
+    --text-color: #403F4B;
     --bkg-color: #fff;
 }
 body.dark-theme {
     --text-color: #eee;
     --bkg-color: #121212;
-}
-
-* {
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -17,11 +128,4 @@ body {
 
 h1, p {
     color: var(--text-color);
-}
-
-.main-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: rgb(53, 53, 53);
-    color: white;
 }
