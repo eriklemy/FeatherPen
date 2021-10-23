@@ -14,3 +14,14 @@ btn.addEventListener("click", function () {
     }
     localStorage.setItem("theme", theme);
 });
+
+var menuNavbar = document.getElementById("menuNavbar");
+menuNavbar.style.maxHeight = "0px";
+
+function menuToggle(){
+    if(menuNavbar.style.maxHeight == "0px"){
+        menuNavbar.style.maxHeight = "200px";
+    } else {
+        menuNavbar.style.maxHeight = "0px";
+    }
+}
