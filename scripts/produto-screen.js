@@ -1,12 +1,10 @@
-var listaProdutos = [[0, 'O preço da verdade', 'preco_da_verdade.jpg', false],
-                     [1, 'Coringa', 'coringa.jpg', false],
-                     [2, 'Dunkirk', 'dunkirk.jpg', true],
-                     [3, 'Resgate', 'resgate.jpg', false]];
-
+listaProdutos = [];
 var carrinho = [];
 
 // ao carregar a pagina
 window.onload = function(){
+    listaProdutos = JSON.parse(window.localStorage.getItem("carrinho"));
+    checkInCart();
     montarCardProdutos();
 }
 
@@ -48,6 +46,16 @@ function comprar(id){
     montarCardProdutos();
 }
 
+function checkInCart(){
+    for(var i = 0; i < listaProdutos.length; i++){
+        if(listaProdutos[i][3] == true){
+            carrinho.push(listaProdutos[i]);
+            window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        }
+        else continue;
+    }
+}
+
 function mudarPaginaCart(){
-    window.location.href = "index.html";
+    window.location.href = "carrinho.html";
 }
