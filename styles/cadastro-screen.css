@@ -1,0 +1,37 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    background: radial-gradient(#fff, #95daf1);
+}
+
+.header {
+    background-image: url("../images/main-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: 30px 50%;
+}
+
+.mdl-layout {
+    align-items: center;
+    justify-content: center;
+}
+
+.mdl-layout__content {
+    padding: 24px;
+    flex: none;
+}
+
+.mdl-button {
+    background-color: deepskyblue;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
