@@ -8,11 +8,17 @@ var listaProdutos = [[0, 'Capricci Crown', 'capricci-crown.jpg', '149.40', false
                      [7, 'Xezo Maestro', 'xezo-maestro.jpg', '1,546.78', false]];
 
 var lista = [];
+var cadastro = [];
 window.onload = function(){
+    cadastro = JSON.parse(window.localStorage.getItem("cadastro"));
     for(var i = 0; i < listaProdutos.length; i++){
         lista.push(listaProdutos[i]);
         window.localStorage.setItem("produtos", JSON.stringify(lista));
     }
+}
+
+function mudarPaginaLogin(){
+    window.location.href = "pages/login.html";
 }
 
 function mudarPaginaCart(){

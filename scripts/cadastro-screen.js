@@ -8,7 +8,7 @@ function cadastroUser(){
     var senha = document.getElementById("senha").value;
     var senhaVerf = document.getElementById("senhaVerf").value;
 
-    if (verificaSenha(senhaVerf) == true){
+    if (verificaSenha(senha, senhaVerf) == true){
         cadastro.push(nome);
         cadastro.push(sobrenome);
         cadastro.push(email);
@@ -17,11 +17,11 @@ function cadastroUser(){
 
         window.localStorage.setItem("cadastro", JSON.stringify(cadastro));
         alert("cadastro realizado com sucesso!!");
-        window.location.href = "produtos.html";
+        window.location.href = "../index.html";
     } else alert("cadastro não efetuado!!");
 }
 
-function verificaSenha(senhaVerf){
+function verificaSenha(senha, senhaVerf){
     if(senha == senhaVerf)
         return true;
     else return false;
