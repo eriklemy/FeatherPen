@@ -4,9 +4,9 @@
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width = device-width, initial - scale = 1.0">
         <title> Projeto Programação WEB </title>
-        <link rel = "stylesheet" href = "styles/main-screen.css">
+        <link rel = "stylesheet" href = "../styles/sobre-screen.css">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
-        <script src = "scripts/main-screen.js"></script>
+        <script src = "../scripts/main-screen.js"></script>
     </head>
     <body>
         <div class="header">
@@ -14,44 +14,45 @@
 
                 <!-- cabecalho -->
                 <div class = "div-cabecalho"> 
-                    <h1>Slogan da Companhia</h1>
+                    <h1> Sobre </h1>
                 </div>
 
                 <!-- menu -->
                 <div class = "navbar">
                     <div class = "logo">
-                        <img src = "images/logo-removebg-preview.png" width = "125px">
+                        <img src = "../images/logo-removebg-preview.png" width = "125px">
                     </div>
                     <nav>
                         <ul id = "menuNavbar">
-                            <li><a href="index.html">Intro</a></li>
+                            <li><a href="../index.html">Intro</a></li>
                             <li><a href="pages/produtos.html">Produtos</a></li>
                             <li><a href="pages/carrinho.html">Carrinho</a></li>
                             <li><a href="pages/sobre.html">Sobre</a></li>
                         </ul>
                     </nav>                
                     <div>
-                        <img src = "images/motor-de-otimizacao-de-busca.png" width = "30px" height = "30px">
+                        <img src = "../images/motor-de-otimizacao-de-busca.png" width = "30px" height = "30px">
                         <a href = "pages/produtos.html">
-                            <img src = "images/carrinho.png" width = "30px" height = "30px">
+                            <img src = "../images/carrinho.png" width = "30px" height = "30px">
                         </a> 
                         <a href = "pages/login.html">
-                            <img src = "images/login.png" width = "30px" height = "30px">
+                            <img src = "../images/login.png" width = "30px" height = "30px">
                         </a>
-                        <img class="btn-toggle" src = "images/dark-mode.png" onclick = "darkModeToggle()" width = "30px" height = "30px">
+                        <img class="btn-toggle" src = "../images/dark-mode.png" onclick = "darkModeToggle()" width = "30px" height = "30px">
                     </div>
-                    <img src = "images/menu.png" class = "menu-icon" width = "30px" height = "30px" onclick = "menuToggle()">
+                    <img src = "../images/menu.png" class = "menu-icon" width = "30px" height = "30px" onclick = "menuToggle()">
                 </div>   
 
                 <!-- imagem de fundo  -->
                 <div class="row">
-                    <div class="col-2">
-                        <h1> Em Construção </h1> <br>
-                        <p> Projeto de programação WEB</p>
-                        <a href = "pages/cadastro.html" class = "button-plus">Cadastrar &#8594;</a>
+                    <div class="col-1">
+                        <h2>Depoimento de clientes:</h2> <br>
+                        <p>Lorem ipsum dolor sit amet. Et nisi voluptatem vel repudiandae harum et ipsa quisquam? Non incidunt animi aut alias ducimus ut obcaecati quae. Hic officia laboriosam ea quam galisum est repellat quos aut earum placeat vel aliquid illo. Et eius mollitia in neque placeat id minima quibusdam et officiis illo est molestiae tempore est tenetur voluptates rem sint minima? </p><p>Ut consequatur aliquam sit modi assumenda et atque nostrum. Ut consectetur quod At consectetur repudiandae et impedit voluptas sit perferendis adipisci? 33 facere dicta id voluptates similique qui soluta quae aut corrupti modi ut numquam reprehenderit non corrupti omnis ea rerum eveniet! </p><p>Eos voluptatem suscipit eum sint autem qui consequatur architecto  culpa repudiandae. Nam doloremque omnis ea dolorem doloribus sed totam voluptate 33 obcaecati porro aut blanditiis reiciendis quo nihil quam est quia porro. Aut dolorum asperiores quo facere pariatur sit pariatur sapiente. </p>
                     </div>
                     <div class="col-2">
-                        <img src = "images/main-removebg-preview.png"/>
+                        Endereço e contato: <br>
+                        <p>Localizada no lado sul do Beco Diagonal em Londres, Inglaterra.</p>
+                        <p>(+55) 4002-8922</p>
                     </div>
                 </div>
             </div>
@@ -59,13 +60,13 @@
             <!-- Footer -->
             <div class = "footer"> 
                 <div class = "container">
-                    <div class = "row">
+                    <div class = "row-1">
                         <div class="footer-col-1">
                             Sobre nos: <br>
                             <p>Somos uma loja de canetas fundada em 382 a.C .<br> Localizada no lado sul do Beco Diagonal em Londres, Inglaterra.</p>
                         </div>
                         <div class="footer-col-2">
-                            <img src = "images/logo-removebg-preview.png">
+                            <img src = "../images/logo-removebg-preview.png">
                             <p>Developer: <br> Erick Lemmy dos Santos Oliveira</p>
                             <p><a href="https://github.com/eriklemy">GitHub</a></p>
                         </div>
@@ -89,13 +90,11 @@
                         </div>
                     </div>
                     <hr>
-                    <p class = "copyright"> Copyright 2021 - Erick Lemmy dos Santos Oliveira <br>
+                    <p class = "copyright"> Copyright 2021 <br> Erick Lemmy dos Santos Oliveira <br>
                     Progração Web </p>
                 </div>
             </div>
         </div>
-
-        <!-- scripts: menu mobile e dark mode -->
         <script>
             // script menu mobile
             var menuNavbar = document.getElementById("menuNavbar");
@@ -108,7 +107,6 @@
                     menuNavbar.style.maxHeight = "0px";
                 }
             }
-            
             // dark mode 
             function darkModeToggle() {
                 var element = document.body;
