@@ -35,3 +35,8 @@ body {
     margin-right: 10px;
     border-radius: 10px;
 }
+
+/* dark mode configuration */
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg)
+}

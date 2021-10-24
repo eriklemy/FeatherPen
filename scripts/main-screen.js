@@ -9,22 +9,6 @@ function mudarPaginaCart(){
     window.location.href = "produtos.html";
 }
 
-const btn = document.querySelector(".btn-toggle");
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-    document.body.classList.add("dark-theme");
-}
-
-btn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
-
-    let theme = "light";
-    if (document.body.classList.contains("dark-theme")) {
-        theme = "dark";
-    }
-    localStorage.setItem("theme", theme);
-});
-
 var menuNavbar = document.getElementById("menuNavbar");
 menuNavbar.style.maxHeight = "0px";
 
@@ -34,4 +18,19 @@ function menuToggle(){
     } else {
         menuNavbar.style.maxHeight = "0px";
     }
+}
+
+var theme = [];
+alert(theme[0])
+
+const theme = localStorage.getItem('dark-mode');
+if(theme) {
+    darkModeToggle(theme)
+}
+
+function darkModeToggle() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    theme.push(document.body.classList.toggle("dark-mode"));
+    window.localStorage.setItem("dark-mode", JSON.stringify(theme));
 }

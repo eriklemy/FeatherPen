@@ -1,13 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8"> 
+        <meta name = "viewport" content = "width = device-width, initial - scale = 1.0">
         <link rel = "stylesheet" href = "styles/produtos-screen.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
         <script src = "scripts/produto-screen.js"></script>
     </head>
     <body>
-        <div id = "div-produtos"> 
-
+        <div class="container">
+            <!-- titulo -->
+            <div class = "div-titulo"> 
+                <h2>Produtos mais vendidos</h2>
+                <button class = "button" onclick = "mudarPaginaCart()">Carrinho</button>
+            </div>
+            <div id = "div-produtos"> </div>
         </div>
-        <button onclick = "mudarPaginaCart()"></button>
+        <div class = "div-button-plus">
+            <button class = "button-plus" onclick="montarCardProdutos()">Ver mais opções</button>
+        </div>
     </body>
 </html>

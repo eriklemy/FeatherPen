@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Dancing Script', cursive;
+    font-size: 20px;
 }
 
 .div-cabecalho {
@@ -119,6 +120,10 @@ p {
     color: #8a8a8a;
 }
 
+.footer a {
+    color: #f3f3f3;
+}
+
 .footer h3 {
     color: #fff;
     margin-bottom: 20px;
@@ -171,7 +176,7 @@ ul {
     display: none;
 }
 
-@media only screen and (max-width: 800px){
+@media(max-width: 800px){
     nav ul {
         position: absolute;
         top: 120px;
@@ -199,7 +204,7 @@ ul {
     }
 }
 
-@media only screen and (max-width: 600px){
+@media(max-width: 600px){
     .row {
         text-align: center;
     }
@@ -210,19 +215,6 @@ ul {
 }
 
 /* dark mode configuration */
-body {
-    --text-color: #403F4B;
-    --bkg-color: #fff;
-}
-body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #121212;
-}
-
-body {
-    background: var(--bkg-color);
-}
-
-h1, p {
-    color: var(--text-color);
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg)
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset = "utf-8">
@@ -13,7 +14,7 @@
 
                 <!-- cabecalho -->
                 <div class = "div-cabecalho"> 
-                    <button class="btn-toggle">Dark/Light</button>
+                    <button class="btn-toggle" onclick = "darkModeToggle()">Dark/Light</button>
                     Slogan da Companhia
                 </div>
 
@@ -93,8 +94,9 @@
             </div>
         </div>
 
-        <!-- script: main menu -->
+        <!-- scripts: menu mobile e dark mode -->
         <script>
+            // script menu mobile
             var menuNavbar = document.getElementById("menuNavbar");
             menuNavbar.style.maxHeight = "0px";
 
@@ -104,6 +106,14 @@
                 } else {
                     menuNavbar.style.maxHeight = "0px";
                 }
+            }
+            
+            // dark mode 
+            var theme = [];
+            function darkModeToggle() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+                window.localStorage.setItem("dark-mode", JSON.stringify(theme));
             }
         </script>
     </body>
