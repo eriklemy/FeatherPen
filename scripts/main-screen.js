@@ -17,5 +17,5 @@ window.onload = function(){
 
 function mudarPaginaCart(){
     // converter para JSON antes de colocar no storage p/reconhecer como objeto
-    window.location.href = "produtos.html";
+    window.location.href = "pages/produtos.html";
 }

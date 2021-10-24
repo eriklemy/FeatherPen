@@ -13,7 +13,7 @@ function montarCardProdutos(){
         var conteudo = "";
         conteudo += '<div class = "div-card">';
         conteudo += '<div class = "div-card-img">';
-        conteudo += '<img src = "images/' + listaProdutos[i][2] + '" />';
+        conteudo += '<img src = "../images/' + listaProdutos[i][2] + '" />';
         conteudo += '</div>';
         conteudo += '<div class = "div-card-description">';
         conteudo +=  'Filme: ' + listaProdutos[i][1];
@@ -41,7 +41,7 @@ function viewMostSell(){
         var conteudo = "";
         conteudo += '<div class = "div-card">';
         conteudo += '<div class = "div-card-img">';
-        conteudo += '<img src = "images/' + listaProdutos[i][2] + '" />';
+        conteudo += '<img src = "../images/' + listaProdutos[i][2] + '" />';
         conteudo += '</div>';
         conteudo += '<div class = "div-card-description">';
         conteudo +=  'Filme: ' + listaProdutos[i][1];

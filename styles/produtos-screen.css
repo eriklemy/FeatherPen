@@ -7,7 +7,7 @@
 body {
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    background: radial-gradient(#fff, #95daf1);
+    background: radial-gradient(#EFE6DD, #00AFB9);
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 .div-cabecalho {
     text-align: center;
-    color: #403F4B;
+    color: #FDFCDC;
 }
 
 /* pai */
@@ -36,11 +36,11 @@ body {
     align-items: center;
     width: 200px;
     height: 250px;
-    background-color: black;
+    background-color: #0081A7;
     margin: 6px;
     float: left;
     border-radius: 10px;
-    color: white;
+    color: #FDFCDC;
 }
 
 /* herança  */
@@ -63,8 +63,8 @@ body {
     width: 100%;
     font-weight: bold;
     text-align: center;
-    color: #95daf1;
-    background-color: #403F4B;
+    color: #0081A7;
+    background-color: #FED9B7;
     padding-top: 5px;
     height: 30px;
     border-bottom-left-radius: 10px;
@@ -76,8 +76,8 @@ body {
     width: 100%;
     font-weight: bold;
     text-align: center;
-    color: #403F4B;
-    background-color: #95daf1;
+    color: #FDFCDC;
+    background-color: #0081A7;
     padding-top: 5px;
     height: 30px;
     border-bottom-left-radius: 10px;
@@ -86,36 +86,38 @@ body {
 }
 
 .div-card-button:hover {
-    background-color: #95daf1;
-    color: #403F4B;
+    background-color: #00AFB9;
+    color: #FDFCDC;
 }
 
 .div-button-plus {
     width: 100%;
-    height: 15%;
     display: inline-block;
 }
 
 .button-plus {
-    background: #403F4B;
-    color: #fff;
+    background: #0081A7;
+    color: #FDFCDC;
     padding: 8px 30px;
-    margin: 30px 0;
     border-radius: 30px;
+    border-style: hidden;
     transition: background 0.5s;
+    cursor: pointer;
 }
 
 .button {
+    padding: 8px 30px;
+    border-style: hidden;
     border-radius: 30px;
-    background-color: #403F4B;
+    background-color: #0081A7;
     text-align: right;
-    color: white;
+    color: #FDFCDC;
     transition: background 0.5s;
     cursor: pointer; 
 }
 
 .button-plus:hover, .button:hover{
-    background: #89dceb;
+    background: #00AFB9;
 }
 
 /* dark mode configuration */

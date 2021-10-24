@@ -10,25 +10,23 @@ body {
     background: radial-gradient(#EFE6DD, #00AFB9);
 }
 
-.header {
-    background-image: url("../images/main-removebg-preview.png");
-    background-repeat: no-repeat;
-    background-position: 25% 50%;
+.mdl-textfield__label {
+    color: #FDFCDC;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.header h1 {
-    color: #FDFCDC;
+.header {
+    padding-top: 10%;
+    width: 100%;
+    background-image: url("../images/main-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: 30% 90%;
 }
 
 .mdl-layout {
     align-items: center;
     justify-content: center;
-}
-
-.mdl-textfield__label {
-    color: #FDFCDC;
-    font-size: 20px;
-    font-weight: bold;
 }
 
 .mdl-layout__content {
@@ -37,8 +35,8 @@ body {
 }
 
 .mdl-button {
-    background-color: #0081A7;
-    color: #EFE6DD;
+    background-color: #0081a7;
+    color: #FDFCDC;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;

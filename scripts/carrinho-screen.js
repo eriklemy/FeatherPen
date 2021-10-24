@@ -12,7 +12,7 @@ function montarCardProdutos(){
         var conteudo = "";
         conteudo += '<div class = "div-card">';
         conteudo += '<div class = "div-card-img">';
-        conteudo += '<img src = "images/' + listaCarrinho[i][2] + '" />';
+        conteudo += '<img src = "../images/' + listaCarrinho[i][2] + '" />';
         conteudo += '</div>';
         conteudo += '<div class = "div-card-description">';
         conteudo +=  'Filme: ' + listaCarrinho[i][1];
@@ -30,5 +30,5 @@ function montarCardProdutos(){
 }
 
 function mudarPaginaCart(){
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
