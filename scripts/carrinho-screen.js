@@ -15,10 +15,12 @@ function montarCardProdutos(){
         conteudo += '<img src = "../images/' + listaCarrinho[i][2] + '" />';
         conteudo += '</div>';
         conteudo += '<div class = "div-card-description">';
-        conteudo +=  'Filme: ' + listaCarrinho[i][1];
+        conteudo +=  '' + listaCarrinho[i][1];
+        conteudo += '</div>';
+        conteudo +=  '<div> <br>R$ ' + listaProdutos[i][3];
         conteudo += '</div>';
 
-        if(listaCarrinho[i][3] == true){
+        if(listaCarrinho[i][4] == true){
             conteudo += '<div class = div-card-button-carrinho>';
             conteudo += 'produto ja no carrinho';
             conteudo += '</div>';    

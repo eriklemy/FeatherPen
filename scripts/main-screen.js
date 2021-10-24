@@ -1,11 +1,11 @@
-var listaProdutos = [[0, 'O preço da verdade', 'preco_da_verdade.jpg', false],
-                     [1, 'Coringa', 'coringa.jpg', false],
-                     [2, 'Dunkirk', 'dunkirk.jpg', true],
-                     [3, 'Coringa', 'coringa.jpg', false],
-                     [4, 'Dunkirk', 'dunkirk.jpg', true],
-                     [5, 'Coringa', 'coringa.jpg', false],
-                     [6, 'Dunkirk', 'dunkirk.jpg', true],
-                     [7, 'Resgate', 'resgate.jpg', false]];
+var listaProdutos = [[0, 'Capricci Crown', 'capricci-crown.jpg', '149.40', false],
+                     [1, 'Compactor gold', 'compactor-gold.jpeg', '239.99', true],
+                     [2, 'Faber Castell Loom', 'faber-castell-loom.jpg', '99.99', false],
+                     [3, 'Jinho 650', 'Jinhao-650.jpg', '60.99', false],
+                     [4, 'Pelikan jazz', 'pelikan-jazz.jpg', '87.10', false],
+                     [5, 'Pilot Kakuno', 'pilot-kakuno.jpg', '119.00', false],
+                     [6, 'Monteverde Invincia', 'monteverde-invincia.jpg', '613.86', false],
+                     [7, 'Xezo Maestro', 'xezo-maestro.jpg', '1,546.78', false]];
 
 var lista = [];
 window.onload = function(){
