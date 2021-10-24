@@ -6,15 +6,9 @@ var listaProdutos = [[0, 'O preço da verdade', 'preco_da_verdade.jpg', false],
                      [5, 'Resgate', 'resgate.jpg', false]];
 
 var carrinho = [];
-
 // ao carregar a pagina
 window.onload = function(){
     viewMostSell();
-    const theme = localStorage.getItem('dark-mode');
-    if(theme) {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-    }
 }
 
 function viewMostSell(){
