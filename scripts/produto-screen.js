@@ -1,41 +1,10 @@
-var listaProdutos = [[0, 'O preço da verdade', 'preco_da_verdade.jpg', false],
-                     [1, 'Dunkirk', 'dunkirk.jpg', true],
-                     [2, 'Resgate', 'resgate.jpg', false],
-                     [3, 'Dunkirk', 'dunkirk.jpg', true],
-                     [4, 'Resgate', 'resgate.jpg', false],
-                     [5, 'Resgate', 'resgate.jpg', false]];
-
+listaProdutos = [];
 var carrinho = [];
 // ao carregar a pagina
 window.onload = function(){
-    viewMostSell();
-}
-
-function viewMostSell(){
-    document.getElementById("div-produtos").innerHTML = "";
-    for(var i = 0; i < 4; i++){
-        var conteudo = "";
-        conteudo += '<div class = "div-card">';
-        conteudo += '<div class = "div-card-img">';
-        conteudo += '<img src = "images/' + listaProdutos[i][2] + '" />';
-        conteudo += '</div>';
-        conteudo += '<div class = "div-card-description">';
-        conteudo +=  'Filme: ' + listaProdutos[i][1];
-        conteudo += '</div>';
-
-        if(listaProdutos[i][3] == false){
-            conteudo += '<div class = div-card-button-comprar onclick = "comprar(' + listaProdutos[i][0] + ')">';
-            conteudo += 'Adicionar ao carrinho';
-            conteudo += '</div>';    
-        } else {
-            conteudo += '<div class = div-card-button-carrinho>';
-            conteudo += 'produto ja no carrinho';
-            conteudo += '</div>';    
-        }
-        conteudo += '</div>';
-
-        document.getElementById("div-produtos").innerHTML += conteudo;
-    }
+    listaProdutos = JSON.parse(window.localStorage.getItem("carrinho"));
+    checkInCart();
+    montarCardProdutos();
 }
 
 function montarCardProdutos(){
@@ -75,6 +44,16 @@ function comprar(id){
     montarCardProdutos();
 }
 
+function checkInCart(){
+    for(var i = 0; i < listaProdutos.length; i++){
+        if(listaProdutos[i][3] == true){
+            carrinho.push(listaProdutos[i]);
+            window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        }
+        else continue;
+    }
+}
+
 function mudarPaginaCart(){
-    window.location.href = "index.html";
+    window.location.href = "carrinho.html";
 }
