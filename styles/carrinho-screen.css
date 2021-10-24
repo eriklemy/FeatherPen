@@ -37,7 +37,7 @@ body {
 .div-card {
     align-items: center;
     width: 200px;
-    height: 250px;
+    height: 280px;
     background-color: #0081A7;
     margin: 6px;
     float: left;
@@ -55,7 +55,7 @@ body {
 
 .div-card-description {
     width: 100%;
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
     padding-top: 2px;
     height: 15px;

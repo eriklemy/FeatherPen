@@ -1,4 +1,4 @@
-listaProdutos = [];
+var listaProdutos = [];
 var carrinho = [];
 // ao carregar a pagina
 window.onload = function(){
@@ -27,7 +27,7 @@ function montarCardProdutos(){
             conteudo += '</div>';    
         } else {
             conteudo += '<div class = div-card-button-carrinho>';
-            conteudo += 'produto ja no carrinho';
+            conteudo += 'produto no carrinho';
             conteudo += '</div>';    
         }
         conteudo += '</div>';
@@ -57,7 +57,7 @@ function viewMostSell(){
             conteudo += '</div>';    
         } else {
             conteudo += '<div class = div-card-button-carrinho>';
-            conteudo += 'produto ja no carrinho';
+            conteudo += 'produto no carrinho';
             conteudo += '</div>';    
         }
         conteudo += '</div>';
