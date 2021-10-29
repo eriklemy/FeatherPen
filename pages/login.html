@@ -11,22 +11,32 @@
         <script src = "../scripts/login-screen.js" defer></script>
     </head>
     <body>
-        <div class="header">
-            <h1> Login </h1>
-            <div class = "mdl-layout">
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input id = "nome" class="mdl-textfield__input" type="text">
-                    <label class="mdl-textfield__label">Usuario...</label>
+        <div class = "login-box">
+            <h2>Login</h2>
+            <form>
+                <div class="user-box">
+                    <input id = "username" type = "text">
+                    <label>Username</label>
                 </div>
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input id = "senha" class="mdl-textfield__input" type="password">
-                    <label class="mdl-textfield__label">Senha...</label>
+                <div class="user-box">
+                    <input id = "senha" type = "password">
+                    <label>Password</label>
                 </div>
-                <main class="mdl-layout__content">
-                    <button onclick = "acessar()" class="mdl-button mdl-js-button mdl-js-ripple-effect"> Acessar </button>
-                    <button onclick="location.href='cadastro.html'" class="mdl-button mdl-js-button mdl-js-ripple-effect"> Cadastrar </button>
-                </main>
-            </div>
-        </div>
+                <a id = "entrar" class = "entrar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Confirmar
+                </a>
+                <a href="cadastro.html">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Criar Conta
+                </a>
+            </form>
+        </div>        
     </body>
 </html>  
