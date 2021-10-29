@@ -3,6 +3,13 @@ window.onload = function(){
     cadastro = JSON.parse(window.localStorage.getItem("cadastro"));
 }
 
+let darkMode = window.localStorage.getItem("darkMode");
+if(darkMode === 'enabled'){
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+
 function acessar(){
     var nome = document.getElementById("nome").value;
     var senha = document.getElementById("senha").value;

@@ -16,11 +16,11 @@ body {
     color: #FDFCDC;
 }
 
-.btn-toggle {
+.dark-mode-toggle {
     cursor: pointer;
 }
 
-.btn-toggle:hover {
+.dark-mode-toggle:hover {
     filter: invert(1);
     border-radius: 30px;
     background-color: #FDFCDC;
@@ -200,6 +200,6 @@ ul {
 }
 
 /* dark mode configuration */
-.dark-mode {
+.darkmode {
     filter: invert(1) hue-rotate(180deg)
 }

@@ -16,12 +16,59 @@ window.onload = function(){
         window.localStorage.setItem("produtos", JSON.stringify(lista));
     }
 }
+// darkmode configuration
+let darkMode = localStorage.getItem('darkMode'); 
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
+const enableDarkMode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkMode', 'enabled');
+};
+
+const disableDarkMode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkMode', null);
+};
+
+if(darkMode === 'enabled') {
+    enableDarkMode();
+};
+
+darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode');
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+        console.log("ok");
+    } else {
+        console.log("ko");
+        disableDarkMode();
+    }
+});
+
+// mudar de paginas mantendo o storage
 function mudarPaginaLogin(){
     window.location.href = "pages/login.html";
 }
 
+// converter para JSON antes de colocar no storage p/reconhecer como objeto
 function mudarPaginaCart(){
-    // converter para JSON antes de colocar no storage p/reconhecer como objeto
     window.location.href = "pages/produtos.html";
 }
+
+// script menu mobile
+var menuNavbar = document.getElementById("menuNavbar");
+menuNavbar.style.maxHeight = "0px";
+
+function menuToggle(){
+    if(menuNavbar.style.maxHeight == "0px"){
+        menuNavbar.style.maxHeight = "200px";
+    } else {
+        menuNavbar.style.maxHeight = "0px";
+    }
+}
+
+// // dark mode 
+// function darkModeToggle() {
+//     var element = document.body;
+//     element.classList.toggle("dark-mode");
+// }

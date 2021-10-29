@@ -7,7 +7,6 @@
 body {
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    background: radial-gradient(#EFE6DD, #00AFB9);
 }
 
 .mdl-textfield__label {
@@ -18,10 +17,8 @@ body {
 
 .header {
     padding-top: 10%;
-    width: 100%;
-    background-image: url("../images/main-removebg-preview.png");
-    background-repeat: no-repeat;
-    background-position: 30% 90%;
+    height: 100%;
+    background: radial-gradient(#EFE6DD, #00AFB9);
 }
 
 .mdl-layout {
@@ -45,6 +42,6 @@ body {
 }
 
 /* dark mode configuration */
-.dark-mode {
+.darkmode {
     filter: invert(1) hue-rotate(180deg)
 }

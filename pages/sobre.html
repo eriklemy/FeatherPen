@@ -6,7 +6,7 @@
         <title> Projeto Programação WEB </title>
         <link rel = "stylesheet" href = "../styles/sobre-screen.css">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
-        <script src = "../scripts/main-screen.js"></script>
+        <script src = "../scripts/main-screen.js" defer></script>
     </head>
     <body>
         <div class="header">
@@ -38,7 +38,7 @@
                         <a href = "pages/login.html">
                             <img src = "../images/login.png" width = "30px" height = "30px">
                         </a>
-                        <img class="btn-toggle" src = "../images/dark-mode.png" onclick = "darkModeToggle()" width = "30px" height = "30px">
+                        <img src = "../images/dark-mode.png" id = "dark-mode-toggle" class = "dark-mode-toggle" width = "30px" height = "30px">
                     </div>
                     <img src = "../images/menu.png" class = "menu-icon" width = "30px" height = "30px" onclick = "menuToggle()">
                 </div>   
@@ -95,23 +95,5 @@
                 </div>
             </div>
         </div>
-        <script>
-            // script menu mobile
-            var menuNavbar = document.getElementById("menuNavbar");
-            menuNavbar.style.maxHeight = "0px";
-
-            function menuToggle(){
-                if(menuNavbar.style.maxHeight == "0px"){
-                    menuNavbar.style.maxHeight = "200px";
-                } else {
-                    menuNavbar.style.maxHeight = "0px";
-                }
-            }
-            // dark mode 
-            function darkModeToggle() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-            }
-        </script>
     </body>
 </html>
