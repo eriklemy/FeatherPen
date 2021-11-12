@@ -74,12 +74,12 @@ function comprar(id){
 
 function EnviarFeedBack(){
     var Feedback = [];
-    var feed = document.getElementById("feed").value;
+    var feed = document.getElementById('feed').value;
     if(feed != ''){
-        Alert("Agradecemos o seu feedback");
+        alert("Agradecemos o seu feedback");
         Feedback.push(feed);
         window.localStorage.setItem("FeedbackStorage",JSON.stringify(FeedbackStorage));
-    }
+    } 
 }
 
 // mudar de paginas mantendo o storage
@@ -91,8 +91,7 @@ function mudarPaginaProd(){
     window.location.href = "pages/produtos.html";
 }
 
-
-// darkmode configuration
+// darkmode 
 let darkMode = localStorage.getItem('darkMode'); 
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
