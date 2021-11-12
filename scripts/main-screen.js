@@ -59,7 +59,7 @@ function viewMostSell(){
     }
 }
 
-function feedBack(){
+function EnviarFeedBack(){
     var Feedback = [];
     var feed = document.getElementById("feed").value;
     if(feed != ""){

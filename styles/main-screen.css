@@ -94,6 +94,11 @@ p {
     text-align: center;
 }
 
+.avatar {
+    height: 50px;
+    width: 50px;
+}
+
 .campo_FeedBack{
     width: 600px;
     height: 150px;
