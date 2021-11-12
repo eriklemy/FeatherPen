@@ -1,7 +1,5 @@
 var cadastro = [];
-
 const cadastrar = document.querySelector('#confirmar');
-
 cadastrar.addEventListener('click', () => {
     var nome = document.getElementById("nome").value;
     var sobrenome = document.getElementById("sobrenome").value;
@@ -16,7 +14,7 @@ cadastrar.addEventListener('click', () => {
     cadastro.push(username);
     if (verificaSenha(senha, senhaVerf) && !verificaEntrada(cadastro)) {
         cadastro.push(senha);
-        cadastro.push(false);
+        cadastro.push(true);
 
         window.localStorage.setItem("cadastro", JSON.stringify(cadastro));
         alert("cadastro realizado com sucesso!!");

@@ -9,6 +9,7 @@ var listaProdutos = [[0, 'Capricci Crown', 'capricci-crown.jpg', '149.40', false
                      [7, 'Xezo Maestro', 'xezo-maestro.jpg', '1,546.78', false]];
 var lista = [];
 var cadastro = [];
+var carrinho = [];
 
 window.onload = function(){
     cadastro = JSON.parse(window.localStorage.getItem("cadastro"));
@@ -61,7 +62,7 @@ function viewMostSell(){
 }
 
 function comprar(id){
-    if(cadastro[5] === true){
+    if(cadastro[5] == true) {
         listaProdutos[id][4] = true;
         carrinho.push(listaProdutos[id]);
         
@@ -81,13 +82,11 @@ function EnviarFeedBack(){
     }
 }
 
-
 // mudar de paginas mantendo o storage
 function mudarPaginaLogin(){
     window.location.href = "pages/login.html";
 }
 
-// converter para JSON antes de colocar no storage p/reconhecer como objeto
 function mudarPaginaProd(){
     window.location.href = "pages/produtos.html";
 }

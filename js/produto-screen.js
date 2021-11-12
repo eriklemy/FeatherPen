@@ -1,8 +1,10 @@
 var listaProdutos = [];
 var carrinho = [];
+var cadastro = [];
 // ao carregar a pagina
 window.onload = function(){
     listaProdutos = JSON.parse(window.localStorage.getItem("produtos"));
+    cadastro = JSON.parse(window.localStorage.getItem("cadastro"));
     checkInCart();
     montarCardProdutos();
 }
@@ -37,7 +39,7 @@ function montarCardProdutos(){
 }
 
 function comprar(id){
-    if(cadastro[5] === true){
+    if(cadastro[5] == true){
         listaProdutos[id][4] = true;
         carrinho.push(listaProdutos[id]);
         
