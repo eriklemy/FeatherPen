@@ -10,9 +10,8 @@ body {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#0080a7, #212534);
+    background: radial-gradient(#EFE6DD, #00AFB9);
     min-height: 100vh;
-    background: #0080a7;
     display: flex;
     justify-content: center;
     align-items: center;
