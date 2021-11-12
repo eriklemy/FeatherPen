@@ -16,11 +16,12 @@ cadastrar.addEventListener('click', () => {
     cadastro.push(username);
     if (verificaSenha(senha, senhaVerf) && !verificaEntrada(cadastro)) {
         cadastro.push(senha);
+        cadastro.push(false);
 
         window.localStorage.setItem("cadastro", JSON.stringify(cadastro));
         alert("cadastro realizado com sucesso!!");
         window.location.href = "../index.html";
-    } else alert("cadastro não efetuado!!");
+    } else alert("cadastro não efetuado!!, Necessario preencher todos os campos e/ou SENHAS não CONFEREM!!");;
 });
 
 function verificaSenha(senha, senhaVerf) {

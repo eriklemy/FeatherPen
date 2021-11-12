@@ -12,14 +12,12 @@ if(darkMode === 'enabled'){
 const entrar = document.querySelector('#entrar');
 
 entrar.addEventListener('click', () => {
-    var nome = document.getElementById("username").value;
+    var username = document.getElementById("username").value;
     var senha = document.getElementById("senha").value;
 
-    console.log(nome);
-    console.log(senha);
-
-    if(nome === cadastro[3] && senha === cadastro[4]){
+    if(username === cadastro[3] && senha === cadastro[4]){
         alert("login realizado com sucesso!!");
+        cadastro[5] = true;
         window.location.href = "produtos.html";
     } else alert("usuario ou senha incorreto!!");
 });
