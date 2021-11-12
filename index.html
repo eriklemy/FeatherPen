@@ -3,7 +3,7 @@
     <head>
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width = device-width, initial - scale = 1.0">
-        <title> Projeto Programação WEB </title>
+        <title> FeatherPen </title>
         <link rel = "stylesheet" href = "css/main-screen.css" defer>
         <link rel = "stylesheet" href = "css/produtos-screen.css" defer>
         <link rel = "stylesheet" href = "css/sobre-screen.css" defer>
@@ -15,8 +15,8 @@
             <div class="container">
 
                 <!-- cabecalho -->
-                <div class = "div-cabecalho"> 
-                    <h1>Slogan da Companhia</h1>
+                <div class = "div-titulo"> 
+                    <h2>FeatherPen onde traços e linhas são unicos</h2>
                 </div>
 
                 <!-- menu -->
@@ -34,11 +34,11 @@
                     </nav>                
                     <div>
                         <img src = "images/motor-de-otimizacao-de-busca.png" width = "30px" height = "30px">
-                        <a href = "pages/produtos.html">
-                            <img src = "images/carrinho.png" width = "30px" height = "30px">
+                        <a onclick = "mudarPaginaProd()">
+                            <img src = "images/carrinho.png" class = "img-pointer" width = "30px" height = "30px">
                         </a> 
                         <a onclick = "mudarPaginaLogin()">
-                            <img src = "images/login.png" width = "30px" height = "30px">
+                            <img src = "images/login.png" class = "img-pointer" width = "30px" height = "30px">
                         </a>
                         <img src = "images/dark-mode.png" id = "dark-mode-toggle" class = "dark-mode-toggle" width = "30px" height = "30px">
                     </div>
@@ -48,8 +48,8 @@
                 <!-- imagem de fundo  -->
                 <div class="row">
                     <div class="col-2">
-                        <h1> Em Construção </h1> <br>
-                        <p> Projeto de programação WEB</p>
+                        <h1> Feather Pen </h1> <br>
+                        <h2> onde traços e linhas são unicos</h2>
                         <a href = "pages/cadastro.html" class = "button-plus">Cadastrar &#8594;</a>
                     </div>
                     <div class="col-2">
@@ -75,7 +75,7 @@
                 <div class="row">
                     <div class="col-3">
                         <!-- cabecalho -->
-                        <h2>Demonstração dos Produtos</h2> <br>
+                        <h2> Demonstração dos Produtos </h2> <br>
                         <iframe width="853" height="480" src="https://www.youtube.com/embed/xN8naCb_nyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h2>Nakaya Naka-ai Fountain Pen <br> </h2>
                         <p>Pen: Nakaya Naka-ai Tame-Sukashi Cat</p>
@@ -88,7 +88,8 @@
                 <div class="col-3">
                     <h2>Depoimento de clientes:</h2> <br>
                     <img class = "avatar" src = "images/avatar.png">
-                    <p>Produto de excelente qualidade chegou na metade do tempo previsto!! </p> <br>
+                    <p> Kenny Rossi </p>
+                    <p>Produto de excelente qualidade, e ainda chegou na metade do tempo previsto!! </p> <br>
                     <p>Escreva Seu Depoimento aqui</p>
                     <textarea class = "campo_FeedBack" id = "feed"></textarea>
                     <div class = "div-button-plus">

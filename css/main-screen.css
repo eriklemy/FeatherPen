@@ -10,11 +10,6 @@ body {
     font-weight: bold;
 }
 
-.div-cabecalho {
-    text-align: center;
-    color: #FDFCDC;
-}
-
 .dark-mode-toggle {
     cursor: pointer;
 }
@@ -29,6 +24,10 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
+}
+
+.img-pointer:hover {
+    cursor:pointer;
 }
 
 nav {
