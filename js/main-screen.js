@@ -61,7 +61,7 @@ function viewMostSell(){
 }
 
 function comprar(id){
-    if(cadastro[5] === '' || cadastro[5] === false){
+    if(cadastro[5] === true){
         listaProdutos[id][4] = true;
         carrinho.push(listaProdutos[id]);
         

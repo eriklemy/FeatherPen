@@ -37,13 +37,14 @@ function montarCardProdutos(){
 }
 
 function comprar(id){
-    // alert("colocou no carrinho " + id + " => " + listaProdutos[id][1]);
-    listaProdutos[id][4] = true;
-    carrinho.push(listaProdutos[id]);
-
-    // converter para JSON antes de colocar no storage p/reconhecer como objeto
-    window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    montarCardProdutos();
+    if(cadastro[5] === true){
+        listaProdutos[id][4] = true;
+        carrinho.push(listaProdutos[id]);
+        
+        // converter para JSON antes de colocar no storage p/reconhecer como objeto
+        window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        montarCardProdutos();
+    } else alert("É necessario estar logado para comprar!!");
 }
 
 function checkInCart(){
