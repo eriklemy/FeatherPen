@@ -59,6 +59,17 @@ function viewMostSell(){
     }
 }
 
+function feedBack(){
+    var Feedback = [];
+    var feed = document.getElementById("feed").value;
+    if(feed != ""){
+        Alert("Agradecemos o seu feedback");
+        Feedback.push(feed);
+        window.localStorage.setItem("FeedbackStorage",JSON.stringify(FeedbackStorage));
+    }
+}
+
+
 // mudar de paginas mantendo o storage
 function mudarPaginaLogin(){
     window.location.href = "pages/login.html";
