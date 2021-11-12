@@ -89,6 +89,10 @@ p {
     margin: 25px 0;
 }
 
+.col-3 {
+    min-width: 300px;
+    text-align: center;
+}
 .button-plus {
     display: inline-block;
     background: #0081a7;

@@ -200,6 +200,7 @@ ul {
 }
 
 /* dark mode configuration */
-.darkmode {
+.darkmode  {
     filter: invert(1) hue-rotate(180deg)
 }
+

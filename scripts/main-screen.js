@@ -15,7 +15,61 @@ window.onload = function(){
         lista.push(listaProdutos[i]);
         window.localStorage.setItem("produtos", JSON.stringify(lista));
     }
+    viewMostSell();
 }
+
+// script menu mobile
+var menuNavbar = document.getElementById("menuNavbar");
+menuNavbar.style.maxHeight = "0px";
+
+function menuToggle(){
+    if(menuNavbar.style.maxHeight == "0px"){
+        menuNavbar.style.maxHeight = "200px";
+    } else {
+        menuNavbar.style.maxHeight = "0px";
+    }
+}
+
+function viewMostSell(){
+    document.getElementById("div-produtos").innerHTML = "";
+    for(var i = 0; i < 4; i++){
+        var conteudo = "";
+        conteudo += '<div class = "div-card">';
+        conteudo += '<div class = "div-card-img">';
+        conteudo += '<img src = "images/' + listaProdutos[i][2] + '" />';
+        conteudo += '</div>';
+        conteudo += '<div class = "div-card-description">';
+        conteudo +=  '' + listaProdutos[i][1];
+        conteudo += '</div>';
+        conteudo +=  '<div> R$ ' + listaProdutos[i][3];
+        conteudo += '</div>';
+
+        if(listaProdutos[i][4] == false){
+            conteudo += '<div class = div-card-button-comprar onclick = "comprar(' + listaProdutos[i][0] + ')">';
+            conteudo += 'Adicionar ao carrinho';
+            conteudo += '</div>';    
+        } else {
+            conteudo += '<div class = div-card-button-carrinho>';
+            conteudo += 'produto no carrinho';
+            conteudo += '</div>';    
+        }
+        conteudo += '</div>';
+
+        document.getElementById("div-produtos").innerHTML += conteudo;
+    }
+}
+
+// mudar de paginas mantendo o storage
+function mudarPaginaLogin(){
+    window.location.href = "pages/login.html";
+}
+
+// converter para JSON antes de colocar no storage p/reconhecer como objeto
+function mudarPaginaProd(){
+    window.location.href = "pages/produtos.html";
+}
+
+
 // darkmode configuration
 let darkMode = localStorage.getItem('darkMode'); 
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
@@ -44,31 +98,3 @@ darkModeToggle.addEventListener('click', () => {
         disableDarkMode();
     }
 });
-
-// mudar de paginas mantendo o storage
-function mudarPaginaLogin(){
-    window.location.href = "pages/login.html";
-}
-
-// converter para JSON antes de colocar no storage p/reconhecer como objeto
-function mudarPaginaCart(){
-    window.location.href = "pages/produtos.html";
-}
-
-// script menu mobile
-var menuNavbar = document.getElementById("menuNavbar");
-menuNavbar.style.maxHeight = "0px";
-
-function menuToggle(){
-    if(menuNavbar.style.maxHeight == "0px"){
-        menuNavbar.style.maxHeight = "200px";
-    } else {
-        menuNavbar.style.maxHeight = "0px";
-    }
-}
-
-// // dark mode 
-// function darkModeToggle() {
-//     var element = document.body;
-//     element.classList.toggle("dark-mode");
-// }

@@ -4,7 +4,7 @@ var carrinho = [];
 window.onload = function(){
     listaProdutos = JSON.parse(window.localStorage.getItem("produtos"));
     checkInCart();
-    viewMostSell();
+    montarCardProdutos();
 }
 
 function montarCardProdutos(){
@@ -18,37 +18,7 @@ function montarCardProdutos(){
         conteudo += '<div class = "div-card-description">';
         conteudo +=  '' + listaProdutos[i][1];
         conteudo += '</div>';
-        conteudo +=  '<div> <br>R$ ' + listaProdutos[i][3];
-        conteudo += '</div>';
-
-        if(listaProdutos[i][4] == false){
-            conteudo += '<div class = div-card-button-comprar onclick = "comprar(' + listaProdutos[i][0] + ')">';
-            conteudo += 'Adicionar ao carrinho';
-            conteudo += '</div>';    
-        } else {
-            conteudo += '<div class = div-card-button-carrinho>';
-            conteudo += 'produto no carrinho';
-            conteudo += '</div>';    
-        }
-        conteudo += '</div>';
-
-        document.getElementById("div-produtos").innerHTML += conteudo;
-    }
-}
-
-
-function viewMostSell(){
-    document.getElementById("div-produtos").innerHTML = "";
-    for(var i = 0; i < 4; i++){
-        var conteudo = "";
-        conteudo += '<div class = "div-card">';
-        conteudo += '<div class = "div-card-img">';
-        conteudo += '<img src = "../images/' + listaProdutos[i][2] + '" />';
-        conteudo += '</div>';
-        conteudo += '<div class = "div-card-description">';
-        conteudo +=  '' + listaProdutos[i][1];
-        conteudo += '</div>';
-        conteudo +=  '<div> <br>R$ ' + listaProdutos[i][3];
+        conteudo +=  '<div> R$ ' + listaProdutos[i][3];
         conteudo += '</div>';
 
         if(listaProdutos[i][4] == false){
