@@ -75,7 +75,7 @@ function comprar(id){
 function EnviarFeedBack(){
     var Feedback = [];
     var feed = document.getElementById("feed").value;
-    if(feed != ""){
+    if(feed != ''){
         Alert("Agradecemos o seu feedback");
         Feedback.push(feed);
         window.localStorage.setItem("FeedbackStorage",JSON.stringify(FeedbackStorage));
