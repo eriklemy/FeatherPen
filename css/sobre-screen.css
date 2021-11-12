@@ -13,7 +13,7 @@ body {
 .div-cabecalho {
     padding-top: 10px;
     text-align: center;
-    color: #FDFCDC;
+    color: #000000;
 }
 
 .dark-mode-toggle {
@@ -55,6 +55,9 @@ p {
     color: #FDFCDC;
 }
 
+h4 {
+    color: #FDFCDC;
+}
 .container {
     max-width: 1300px;
     margin: auto;
