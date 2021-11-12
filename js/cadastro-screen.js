@@ -10,11 +10,11 @@ cadastrar.addEventListener('click', () => {
     var senha = document.getElementById("senha").value;
     var senhaVerf = document.getElementById("senhaVerf").value;
 
-    if (verificaSenha(senha, senhaVerf) == true){
-        cadastro.push(nome);
-        cadastro.push(sobrenome);
-        cadastro.push(email);
-        cadastro.push(username);
+    cadastro.push(nome);
+    cadastro.push(sobrenome);
+    cadastro.push(email);
+    cadastro.push(username);
+    if (verificaSenha(senha, senhaVerf) && !verificaEntrada(cadastro)) {
         cadastro.push(senha);
 
         window.localStorage.setItem("cadastro", JSON.stringify(cadastro));
@@ -23,8 +23,17 @@ cadastrar.addEventListener('click', () => {
     } else alert("cadastro não efetuado!!");
 });
 
-function verificaSenha(senha, senhaVerf){
-    if(senha == senhaVerf)
+function verificaSenha(senha, senhaVerf) {
+    if(senha === senhaVerf && senha != "")
         return true;
     else return false;
+}
+
+function verificaEntrada(cadastro) {
+    var cont = 0;
+    for(var i = 0; i < cadastro.length; i++){
+        if(cadastro[i] == "")
+            cont += 1;
+    }
+    return (cont == cadastro.length); 
 }
