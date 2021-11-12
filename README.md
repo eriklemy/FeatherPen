@@ -2,6 +2,7 @@
 Repositóride desenvolvimento do projeto semestral final da matéria de programação web
 
 - Erick Lemmy dos Santos Oliveira (2021)
+- Repositorio GitHub: https://github.com/eriklemy/ProjetoWeb
 - Link GitHub Pages: https://eriklemy.github.io/ProjetoWeb/
 - Entregue 12/11/2021 
   
