@@ -9,44 +9,193 @@ body {
     text-align: center;
     background: radial-gradient(#EFE6DD, #00AFB9);
 }
-
-.header {
-    background-image: url("../images/main-removebg-preview.png");
-    background-repeat: no-repeat;
-    background-position: 25% 50%;
-}
-
-.header h1 {
-    color: #FDFCDC;
-}
-
-.mdl-layout {
-    align-items: center;
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
 }
 
-.mdl-textfield__label {
-    color: #FDFCDC;
-    font-size: 20px;
-    font-weight: bold;
+.darkmode {
+    filter: invert(1) hue-rotate(180deg);
 }
 
-.mdl-layout__content {
-    padding: 24px;
-    flex: none;
+.container {
+    border-radius: 6px;
+    font-size: 1.8em;
+    color: rgb(88 199 250 / 0%);
+    position: absolute;
+    padding: 10px 110px 150px 110px;
+    margin-bottom: 100px;
+    background: #212534;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    height: 585px;
 }
 
-.mdl-button {
-    background-color: #0081A7;
-    color: #EFE6DD;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
+.container h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+  
+.container .header {
+    position: relative;
+}
+  
+.container .header input {
+    width: 300px;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
 }
 
-/* dark mode configuration */
-.dark-mode {
-    filter: invert(1) hue-rotate(180deg)
+.container .header label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+  
+.container .header input:focus ~ label,
+.container .header input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+  
+.container form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    left: 10px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 5px;
+}
+  
+.container a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.container a span {
+    position: absolute;
+    display: block;
+}
+  
+.container a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+  
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+  
+.container a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+  
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+  
+.container a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+  
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+  
+.container a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+  
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: #fdffc4;
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
 }

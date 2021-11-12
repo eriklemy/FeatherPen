@@ -1,6 +1,8 @@
 var cadastro = [];
 
-function cadastroUser(){
+const cadastrar = document.querySelector('#confirmar');
+
+cadastrar.addEventListener('click', () => {
     var nome = document.getElementById("nome").value;
     var sobrenome = document.getElementById("sobrenome").value;
     var email = document.getElementById("email").value;
@@ -19,7 +21,7 @@ function cadastroUser(){
         alert("cadastro realizado com sucesso!!");
         window.location.href = "../index.html";
     } else alert("cadastro não efetuado!!");
-}
+});
 
 function verificaSenha(senha, senhaVerf){
     if(senha == senhaVerf)

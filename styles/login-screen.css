@@ -1,9 +1,3 @@
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
-}
-  
 .darkmode {
     filter: invert(1) hue-rotate(180deg);
 }
@@ -16,9 +10,9 @@ body {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    background: linear-gradient(#0080a7, #212534);
     min-height: 100vh;
-    background: #212534;
+    background: #0080a7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,40 +36,6 @@ body {
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
 }
 
-.login-box::before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-        var(--rotate)
-        , #5ddcff, #3c67e3 43%, #4e00c2);
-        position: absolute;
-        z-index: -1;
-        top: -1%;
-        left: -2%;
-        animation: spin 2.5s linear infinite;
-}
-  
-.login-box::after {
-    position: absolute;
-    content: "";
-    top: calc(var(65vh) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(65vh / 6));
-    background-image: linear-gradient(
-        var(--rotate)
-        , #5ddcff, #3c67e3 43%, #4e00c2);
-        opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
-}
   
 @keyframes spin {
     0% {
@@ -111,9 +71,9 @@ body {
 
 .login-box .user-box label {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 16px;
     color: #fff;
     pointer-events: none;
@@ -132,6 +92,7 @@ body {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
+    left: 50px;
     color: #03e9f4;
     font-size: 16px;
     text-decoration: none;
@@ -228,9 +189,4 @@ body {
     50%,100% {
         bottom: 100%;
     }
-}
-
-/* dark mode configuration */
-.darkmode {
-    filter: invert(1) hue-rotate(180deg)
 }
