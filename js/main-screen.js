@@ -81,7 +81,6 @@ function EnviarFeedBack(){
     } 
 }
 
-// mudar de paginas mantendo o storage
 function mudarPaginaLogin(){
     window.location.href = "pages/login.html";
 }
@@ -90,7 +89,7 @@ function mudarPaginaProd(){
     window.location.href = "pages/produtos.html";
 }
 
-// darkmode 
+// ============================ DARKMODE ==================================== 
 let darkMode = localStorage.getItem('darkMode'); 
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
 

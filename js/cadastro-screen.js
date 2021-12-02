@@ -23,9 +23,7 @@ cadastrar.addEventListener('click', () => {
 });
 
 function verificaSenha(senha, senhaVerf) {
-    if(senha === senhaVerf && senha != "")
-        return true;
-    else return false;
+    return (senha === senhaVerf && senha != "");
 }
 
 function verificaEntrada(cadastro) {
