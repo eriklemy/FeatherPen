@@ -66,7 +66,6 @@ function comprar(id){
         listaProdutos[id][4] = true;
         carrinho.push(listaProdutos[id]);
         
-        // converter para JSON antes de colocar no storage p/reconhecer como objeto
         window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
         mudarPaginaProd();
     } else alert("É necessario estar logado para comprar!!");
@@ -113,9 +112,7 @@ darkModeToggle.addEventListener('click', () => {
     darkMode = localStorage.getItem('darkMode');
     if(darkMode !== 'enabled') {
         enableDarkMode();
-        console.log("ok");
     } else {
-        console.log("ko");
         disableDarkMode();
     }
 });
