@@ -13,7 +13,7 @@ function montarCardProdutos(){
     document.getElementById("div-produtos").innerHTML = "";
     for(var i = 0; i < listaProdutos.length; i++){
         var conteudo = "";
-        conteudo += '<div class = "div-card">';
+        conteudo += '<div class = "div-card-produtos">';
         conteudo += '<div class = "div-card-img">';
         conteudo += '<img src = "../images/' + listaProdutos[i][2] + '" />';
         conteudo += '</div>';

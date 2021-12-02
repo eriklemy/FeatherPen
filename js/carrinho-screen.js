@@ -10,7 +10,7 @@ function montarCardProdutos(){
     document.getElementById("div-carrinho").innerHTML = "";
     for(var i = 0; i < listaCarrinho.length; i++){
         var conteudo = "";
-        conteudo += '<div class = "div-card">';
+        conteudo += '<div class = "div-card-carrinho">';
         conteudo += '<div class = "div-card-img">';
         conteudo += '<img src = "../images/' + listaCarrinho[i][2] + '" />';
         conteudo += '</div>';

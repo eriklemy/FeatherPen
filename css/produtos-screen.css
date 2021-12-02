@@ -18,12 +18,7 @@ body {
     text-align: center;
 }
 
-.div-cabecalho {
-    text-align: center;
-    color: #FDFCDC;
-}
-
-/* pai */
+/* produtos */
 #div-produtos {
     padding-top: 1%;
     padding-left: 15%;
@@ -31,11 +26,31 @@ body {
     height: 50%;
 }
 
-/* herança */
-.div-card {
+/* carrinho */
+#div-carrinho {
+    padding-top: 1%;
+    padding-left: 16%;
+    width: 100%;
+    height: 25%;
+}
+
+/* produtos */
+.div-card-produtos {
     align-items: center;
     width: 200px;
     height: 265px;
+    background-color: #0081A7;
+    margin: 6px;
+    float: left;
+    border-radius: 10px;
+    color: #FDFCDC;
+}
+
+/* carrinho */
+.div-card-carrinho {
+    align-items: center;
+    width: 200px;
+    height: 280px;
     background-color: #0081A7;
     margin: 6px;
     float: left;
@@ -92,16 +107,17 @@ body {
 
 .div-button-plus {
     padding-top: 10px;
+    height: 15%;
     width: 100%;
     display: inline-block;
 }
 
 .button-plus {
+    padding: 8px 30px;
+    border-style: hidden;
     background: #0081A7;
     color: #FDFCDC;
-    padding: 8px 30px;
     border-radius: 30px;
-    border-style: hidden;
     transition: background 0.5s;
     cursor: pointer;
 }
