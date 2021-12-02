@@ -13,6 +13,8 @@ body {
     padding:0;
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    font-weight: bold;
     background: radial-gradient(#EFE6DD, #00AFB9);
     min-height: 100vh;
     display: flex;
@@ -45,7 +47,7 @@ body {
     top: 40%;
     left: 50%;
     width: 400px;
-    padding: 60px;
+    padding: 70px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
@@ -58,7 +60,7 @@ body {
 }
 
 .container h2 {
-    margin-bottom: 300%;
+    margin-top: -125%;
     padding: 0;
     text-align: top center;
 }
@@ -70,7 +72,7 @@ body {
 .container .header input {
     width: 300px;
     padding: 15px 0;
-    font-size: 13px;
+    font-size: 16px;
     color: #fff;
     margin-bottom: 25px;
     border: none;
@@ -95,7 +97,7 @@ body {
     top: -20px;
     left: 0;
     color: #03e9f4;
-    font-size: 12px;
+    font-size: 22px;
 }
 
 .container form a {
