@@ -1,3 +1,7 @@
+.darkmode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
 * { 
     margin: 0;
     padding: 0;
@@ -5,10 +9,10 @@
 }
 
 body {
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
     margin:0;
     padding:0;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
     background: radial-gradient(#EFE6DD, #00AFB9);
     min-height: 100vh;
     display: flex;
@@ -16,33 +20,49 @@ body {
     align-items: center;
     padding-top: 6rem;
     padding-bottom: 1rem;
-    box-sizing: border-box;
-}
-
-.darkmode {
-    filter: invert(1) hue-rotate(180deg);
 }
 
 .container {
-    border-radius: 6px;
-    font-size: 1.8em;
-    color: rgb(88 199 250 / 0%);
+    margin-bottom: 350px;
+}
+
+.container .cadastro-box {
     position: absolute;
-    padding: 10px 110px 150px 110px;
-    margin-bottom: 100px;
+    transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5); 
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    height: 585px;
+    border-radius: 6px;
+    height: 600px;
+    top: 60%;
+    left: 50%;
+    margin-top: -70px;
+    padding: 70px;
+}
+
+.container .login-box {
+    position: absolute;
+    border-radius: 6px;
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+} 
+
+.container h1 {
+    padding: 0;
+    margin-top: -150px;
+    text-align: top center;
 }
 
 .container h2 {
-    font-size: 30px;
-    margin: 0 0 20px;
+    margin-bottom: 300%;
     padding: 0;
-    color: #fff;
-    text-align: center;
+    text-align: top center;
 }
-  
+
 .container .header {
     position: relative;
 }
@@ -50,7 +70,7 @@ body {
 .container .header input {
     width: 300px;
     padding: 15px 0;
-    font-size: 16px;
+    font-size: 13px;
     color: #fff;
     margin-bottom: 25px;
     border: none;
@@ -77,20 +97,20 @@ body {
     color: #03e9f4;
     font-size: 12px;
 }
-  
+
 .container form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
     left: 10px;
     color: #03e9f4;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     overflow: hidden;
     transition: .5s;
-    margin-top: 5px;
+    margin-top: 30px;
 }
-  
+
 .container a:hover {
     background: #03e9f4;
     color: #fff;
@@ -179,19 +199,4 @@ body {
     50%,100% {
         bottom: 100%;
     }
-}
-
-.dark-mode-toggle {
-    position: absolute;
-    z-index: 100;
-    top: 1em;
-    right: 1em;
-    color: #fdffc4;
-    border: 2px solid currentColor;
-    padding: 4px;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
 }

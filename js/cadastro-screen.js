@@ -1,5 +1,6 @@
 var cadastro = [];
 const cadastrar = document.querySelector('#confirmar');
+
 cadastrar.addEventListener('click', () => {
     var nome = document.getElementById("nome").value;
     var sobrenome = document.getElementById("sobrenome").value;
@@ -33,4 +34,10 @@ function verificaEntrada(cadastro) {
             cont += 1;
     }
     return (cont == cadastro.length); 
+}
+
+let darkMode = window.localStorage.getItem("darkMode");
+if(darkMode === 'enabled'){
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkMode', 'enabled');
 }
